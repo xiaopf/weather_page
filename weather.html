@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>weather</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script src="script.js"></script>
+
+</head>
+<body>
+
+
+<div class='container'>
+		<div class="row">
+			<div class='col-md-12 header'>
+			      <div id="positionGroup" class='inline'>
+			      	<p class='inline fa fa-map-marker'></p>
+			        <p class='position inline '></p>
+			      </div>
+                  <div id="searchChange" class='inline'>
+				      <a href='javascript:history.go(0);' class='inline fa  fa-refresh'></a>
+				      <div id='searchCity'>
+				          <input id='searchContent' type="text" placeholder='输入要查找的城市'>
+					      <button id='searchClean' class='fa fa-times'></button>
+
+				      </div>
+				      <button id="searchButton" class='inline fa  fa-search'></button>
+				      <p class='text-danger inline' id="msg"></p>
+
+				      <!-- <button id="cityList" class='inline fa  fa-list-ul'></button>	 -->
+			      </div>
+
+
+	        </div>
+	    </div>    
+
+	    <div class="row">
+	        <div class='col-md-8 col-sm-8 offset'>
+		        <p>
+			      <span id='weather_big_tem' class='inline '></span>
+			      <img  id="weather_big_img" alt="weather_big_img">
+			      <span id='weather_text' class='inline'></span>
+			      <span id="weather_update_time" class="inline "></span>
+		        </p>
+
+		        <p>
+		        	<span id='wet'  class='fa fa-tint '></span>
+		        	<span id='wind'  class='fa fa-location-arrow'></span>
+		        	<!-- <span id='drive' class='fa fa-car'>   今日不限</span> -->
+		        </p>
+
+		        <p><span class="today_msg">今日天气提示</span><span id="today_msg_text"></span></p>
+
+		    </div>
+
+	        <div class='col-md-3 col-sm-3'>
+			    <img  id='boy' class="img-responsive" alt="lovely_boy">
+	        </div>
+
+	    </div>    
+
+
+
+		<div class="row">
+			<div class='col-md-12'>
+		        <div id='weather_forecast'>
+	                <p>天气预报</p>
+	                <div >
+			            <table id="tab1" class="table" >
+			            	<thead>
+			            	    <tr>
+			            			<th>日期</th>
+			            			<th>天气</th>
+			            			<th>温度</th>
+			            			<th>风力</th>
+			            		</tr>
+			            	</thead>
+			            	<tbody>
+			            		 <tr>
+			            		 	<td></td>
+			            		 	<td><img class="weather_mini_img" alt="sun"></td>
+			            		 	<td></td>
+			            		 	<td></td>
+			            		 </tr>
+			            		 <tr>
+			            		 	<td></td>
+			            		 	<td><img class="weather_mini_img" alt="sun"></td>
+			            		 	<td></td>
+			            		 	<td></td>
+			            		 </tr>
+			            		 <tr>
+			            		 	<td></td>
+			            		 	<td><img class="weather_mini_img" alt="sun"></td>
+			            		 	<td></td>
+			            		 	<td></td>
+			            		 </tr>
+			            		 <tr>
+			            		 	<td></td>
+			            		 	<td><img class="weather_mini_img" alt="sun"></td>
+			            		 	<td></td>
+			            		 	<td></td>
+			            		 </tr>
+			            		 <tr>
+			            		 	<td></td>
+			            		 	<td><img class="weather_mini_img" alt="sun"></td>
+			            		 	<td></td>
+			            		 	<td></td>
+			            		 </tr>
+			            		 <tr>
+			            		 	<td></td>
+			            		 	<td><img class="weather_mini_img" alt="sun"></td>
+			            		 	<td></td>
+			            		 	<td></td>
+			            		 </tr>
+			            		 <tr>
+			            		 	<td></td>
+			            		 	<td><img class="weather_mini_img" alt="sun"></td>
+			            		 	<td></td>
+			            		 	<td></td>
+			            		 </tr> 
+			            	</tbody>
+			            </table>
+			        </div>  
+				</div>	
+				 <div id='living_index'>
+	                <p>生活指数</p>
+	                <div class="table-responsive">
+			            <table id="tab2" class="table">
+			              <tbody>
+		            		 <tr>
+		            		 	<td>
+		            		 	<img class="index" src="https://h5tq.moji.com/tianqi/assets/images/script/20.png" alt="穿衣">
+		            		 	<abbr class='p1' title="">穿衣</abbr>
+		            		 	<p class='p2'></p>
+		            		 	</td>
+
+		            		 	<td>
+		            		 	<img class="index" src="https://h5tq.moji.com/tianqi/assets/images/script/21.png" alt="紫外线">
+		            		 	<p class='p1'>紫外线</p>
+		            		 	<p class='p2'></p>
+		            		 	</td>
+
+		            		 	<td>
+		            		 	<img class="index" src="https://h5tq.moji.com/tianqi/assets/images/script/17.png" alt="洗车">
+		            		 	<p class='p1'>洗车</p>
+		            		 	<p class='p2'></p>
+		            		 	</td>
+
+		            		 	<td>
+		            		 	<img class="index" src="https://h5tq.moji.com/tianqi/assets/images/script/26.png" alt="晨练">
+		            		 	<p class='p1'>晨练</p>
+		            		 	<p class='p2'></p>
+		            		 	</td>
+		            		 </tr>
+		            		 <tr>
+		            		 	<td>
+		            		 	<img class="index" src="https://h5tq.moji.com/tianqi/assets/images/script/12.png" alt="出游">
+		            		 	<p class='p1'>出游</p>
+		            		 	<p class='p2'></p>
+		            		 	</td>
+		            		 	<td></td>
+		            		 	<td></td>
+		            		 	<td></td>
+		            		 </tr>
+			               </tbody>
+			            </table>
+			        </div>  
+				</div>	
+
+
+
+
+			</div>
+		</div>  
+		<br> 
+		<br> 
+		<br> 
+</div>
+
+
+
+
+</body>
+</html>

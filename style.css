@@ -1,0 +1,181 @@
+body{
+        background:url('https://h5tq.moji.com/tianqi/assets/images/skin/day_0.jpg') no-repeat center center; 
+        background-size: cover;
+        background-color: #b7ba6b;
+        color:white;
+        background-attachment:fixed;
+    }
+    .header{
+        margin-top: 30px;
+        font-size:25px;
+
+    }
+    .header a{
+        border:none;
+        color: #fff;
+        text-decoration:none;
+        margin:0  10px 0 10px;
+        outline: none;
+    }
+    .header button{
+        background-color: transparent;
+        border:none;
+        margin:0  10px 0 10px;
+        outline: none;
+    }
+    #searchChange{
+        position:relative;
+
+    }
+    #searchCity{
+        display: inline-block;
+        border-bottom:1px solid white;
+
+    } 
+    .header input{
+        background-color: transparent;
+        border:none;
+        margin:0  10px 0 10px;
+        outline: none;
+    }
+
+
+
+    .header p:nth-child(1){
+        font-size:30px;
+        color: red;
+        margin-right: 10px;
+    }
+
+    .inline{
+        display:inline-block;
+    }
+
+    #weather_big_tem{
+        font-size:160px;  
+
+    }
+    #weather_big_img{
+        
+        vertical-align:text-bottom;
+        margin:0 15px -10px 0;
+    }
+
+    #weather_text{
+        font-size: 30px;
+        font-weight: bold;
+        margin:10px;
+    }
+
+    #weather_update_time{
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0 10px;
+    }
+    #wet{
+        font-size:20px;
+        margin: 0 20px 0 0;
+    }
+    #wind{
+        font-size:20px;
+        margin: 0 20px 0 0;
+    }
+    #drive{
+        font-size:20px;
+        margin: 0 20px 0 0;
+    }
+    #wet span{
+        font-size:23px;
+        margin: 0 10px 0 0;
+    }
+    #wind span{
+        font-size:23px; 
+        margin: 0 10px 0 0;
+    }
+    #drive span{
+        font-size:23px;
+        margin: 0 10px 0 0;
+    }
+    .today_msg{
+        font-size:18px;
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius:20px;
+        background: grey;
+        margin: 30px 0 0 0;
+    }
+    #today_msg_text{
+        font-size:18px;
+        padding: 4px 10px;
+    }
+
+    #weather_forecast{
+    
+        padding: 20px;
+        margin: 30px 0;
+        font-size: 18px;
+        width:100%;
+        /*background-color: #78a355;*/
+    }
+
+    #tab1 td{
+
+        vertical-align:middle;
+        height: 70px;
+    }
+
+
+    .weather_mini_img{
+        width: 28px;
+        height:28px;
+    }
+
+    #living_index{
+    
+        padding: 20px;
+        margin: 30px 0;
+        font-size: 18px;
+        width:100%;
+        /*background-color: #78a355;*/
+    }
+
+     #tab2 td{
+        position: relative;
+        border:1px solid white;
+        vertical-align:middle;
+        height: 100px;
+
+    }
+
+    #tab2 td .p1{
+        color:#989ea4;
+        font-weight: bold;
+        font-size: 24px;
+        position: absolute;
+        top:10%;
+        left:50%;
+        text-decoration: none;
+    }
+
+    #tab2 td .p2{
+        font-size: 20px;
+        position: absolute;
+        top:45%;
+        left:50%;
+    }
+
+
+    .index{
+        margin: 8px 16px;
+    }
+
+
+
+
+
+
+
+
+    .offset{
+        margin-left: 20px;
+    }
